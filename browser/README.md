@@ -35,7 +35,7 @@ To run the application, use the following command:
 npm start
 ```
 
-This will start the development server and you can access the application at `http://localhost:3000`.
+This will start the development server and you can access the application at `https://difficult-portia-skouza-9f0197f2.koyeb.app`.
 
 ## File Structure
 

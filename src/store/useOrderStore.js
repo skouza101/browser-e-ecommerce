@@ -2,7 +2,7 @@ import { create } from "zustand";
 import axios from "axios";
 import toast from 'react-hot-toast';
 
-const BASE_URL = "http://localhost:3001/api/orders/";
+const BASE_URL = "https://difficult-portia-skouza-9f0197f2.koyeb.app/api/orders";
 
 function getUserId() {
   if (typeof window !== "undefined") {
@@ -22,7 +22,7 @@ export const useOrderStore = create((set, get) => ({
       const userId = getUserId();
       if (userId){
 
-        const data= await axios.get(`http://localhost:3001/api/orders/fetchorder?userId=${userId}`);
+        const data= await axios.get(`${BASE_URL}/fetchorder?userId=${userId}`);
         set({ user_products: data.data.orders })
         localStorage.setItem("orderSize" , get().user_products.length.toString());
         return data.data.orders;
@@ -43,7 +43,7 @@ export const useOrderStore = create((set, get) => ({
 
     try {
       
-      const res = await axios.put(`http://localhost:3001/api/orders/updateorder`, {
+      const res = await axios.put(`${BASE_URL}/updateorder`, {
         orderid: orderid,
         delta: delta
       });
@@ -58,7 +58,7 @@ export const useOrderStore = create((set, get) => ({
 
   deleteOrder: async (orderid) => {
     try {
-      const res = await axios.delete(`http://localhost:3001/api/orders/deleteorder`, {
+      const res = await axios.delete(`${BASE_URL}/deleteorder`, {
         data: { orderId: orderid }
       });
       toast.success("Item removed from cart");
@@ -73,7 +73,7 @@ export const useOrderStore = create((set, get) => ({
       const userId = getUserId();
       if (userId){
 
-      await axios.post(`http://localhost:3001/api/orders` , {
+      await axios.post(`${BASE_URL}` , {
         productId: productid,
         userId: Number(getUserId())
       })

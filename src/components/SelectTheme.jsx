@@ -15,7 +15,6 @@ const SelectTheme = () => {
 
   useEffect(() => {
     if (mounted) {
-      document.documentElement.setAttribute("data-theme", theme);
       localStorage.setItem("theme", theme);
     }
   }, [theme, mounted]);

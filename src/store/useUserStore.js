@@ -2,6 +2,8 @@ import axios from "axios";
 import { create } from "zustand";
 import toast from "react-hot-toast";
 
+const BASE_URL = "https://difficult-portia-skouza-9f0197f2.koyeb.app/api/users";
+
 export const useUserStore = create((set, get) => ({
   currentUser: null,
   loading: false,
@@ -41,7 +43,7 @@ export const useUserStore = create((set, get) => ({
     const payload = get().userForm;
     try {
       const userData = await axios.post(
-        "http://localhost:3001/api/users/registre",
+        `${BASE_URL}/registre`,
         payload
       );
       set({ currentUser: userData.data }); 
@@ -71,7 +73,7 @@ export const useUserStore = create((set, get) => ({
         password: get().userForm.password,
       };
       const userData = await axios.post(
-        "http://localhost:3001/api/users/login",
+        `${BASE_URL}/login`,
         payload
       );
       set({ currentUser: userData.data.data }); 
@@ -103,7 +105,7 @@ export const useUserStore = create((set, get) => ({
     try {
       const id = get().userForm.id;
       const profileData = await axios.get(
-        `http://localhost:3001/api/users/${id}`
+        `${BASE_URL}/${id}`
       );
       set({ currentUser: profileData.data });
       window.localStorage.setItem("userInfo", JSON.stringify(profileData.data));

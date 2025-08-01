@@ -89,8 +89,6 @@ const RegisterPage = () => {
       const result = zxcvbn(value);
       if (result.score <= 2) {
         setError("Password is too weak. Please choose a stronger password.");
-        toast.error("Password is too weak. Please choose a stronger password.");
-      } else {
         setError(false);
       }
     }

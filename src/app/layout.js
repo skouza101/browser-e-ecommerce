@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
 import { Poppins, Roboto_Mono } from 'next/font/google';
+import ThemeProvider from "@/components/ThemeProvider";
 
 export const roboto = Roboto_Mono({
   subsets: ['latin'],
@@ -30,14 +31,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="night">
+    <html lang="en">
       <body
         className={`${poppins.variable}  antialiased bg-base-300`}
       >
-        <Navbar />
-        <main className=" bg-base-300 font-poppins">{children}</main>
-        <Toaster />
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          <main className=" bg-base-300 font-poppins">{children}</main>
+          <Toaster />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

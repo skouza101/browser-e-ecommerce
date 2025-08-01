@@ -2,7 +2,7 @@ import { create } from "zustand";
 import toast from "react-hot-toast"; // FIX: Use a valid toast library for React
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = "https://difficult-portia-skouza-9f0197f2.koyeb.app";
 
 function getUserId() {
   if (typeof window !== "undefined") {
@@ -41,7 +41,7 @@ export const useProductStore = create((set, get) => ({
           e.preventDefault();
         }
         set({ loading: true });
-      const res = await axios.post(`http://localhost:3001/api/products/`, { ...payload });
+      const res = await axios.post(`${BASE_URL}/api/products/`, { ...payload });
 
       await get().fetchProducts();
       get().resetForm();
