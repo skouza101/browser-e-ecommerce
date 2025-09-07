@@ -2,7 +2,7 @@ import { create } from "zustand";
 import axios from "axios";
 import toast from 'react-hot-toast';
 
-const BASE_URL = "https://difficult-portia-skouza-9f0197f2.koyeb.app/api/orders";
+const BASE_URL = "https://tight-hermia-skouza-d27f0387.koyeb.app/api/orders";
 
 function getUserId() {
   if (typeof window !== "undefined") {
