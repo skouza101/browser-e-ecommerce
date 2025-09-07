@@ -2,7 +2,7 @@ import axios from "axios";
 import { create } from "zustand";
 import toast from "react-hot-toast";
 
-const BASE_URL = "https://difficult-portia-skouza-9f0197f2.koyeb.app/api/users";
+const BASE_URL = "https://tight-hermia-skouza-d27f0387.koyeb.app/api/users";
 
 export const useUserStore = create((set, get) => ({
   currentUser: null,
