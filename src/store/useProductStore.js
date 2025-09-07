@@ -2,7 +2,7 @@ import { create } from "zustand";
 import toast from "react-hot-toast"; // FIX: Use a valid toast library for React
 import axios from "axios";
 
-const BASE_URL = "https://difficult-portia-skouza-9f0197f2.koyeb.app";
+const BASE_URL = "https://tight-hermia-skouza-d27f0387.koyeb.app";
 
 function getUserId() {
   if (typeof window !== "undefined") {
