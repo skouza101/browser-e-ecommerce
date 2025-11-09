@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
     <div className="w-full  items-center rounded-lg shadow-lg bg-base-100 border border-base-content/10 hover:shadow-xl transition-shadow duration-300 ">
       <Link href={`/products/${product.id}`} className="block relative overflow-hidden rounded-t-lg max-h-48">
       <Image
-          className=" rounded-t-lg hover:scale-105 transition-transform duration-500 cursor-pointer"
+          className=" rounded-t-lg hover:scale-105 transition-transform duration-500 cursor-pointer w-full"
           src={product.imgurl}
           alt="product image"
           width={500}
