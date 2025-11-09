@@ -18,7 +18,7 @@ A modern e-commerce website built with Next.js, featuring a beautiful UI, respon
 
 ## 🚀 Live Demo
 
-Check out the live demo at [https://difficult-portia-skouza-9f0197f2.koyeb.app](https://difficult-portia-skouza-9f0197f2.koyeb.app)
+Check out the live demo at [https://browser-e-ecommerce.vercel.app/](https://browser-e-ecommerce.vercel.app/)
 
 ## 🛠️ Getting Started
 
