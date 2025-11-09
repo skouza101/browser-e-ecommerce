@@ -9,13 +9,14 @@ const ProductCard = ({ product }) => {
   
   return (
     <div className="w-full  items-center rounded-lg shadow-lg bg-base-100 border border-base-content/10 hover:shadow-xl transition-shadow duration-300 ">
-      <Link href={`/products/${product.id}`} className="relative overflow-hidden rounded-t-lg max-h-72 flex items-center justify-center">
+      <Link href={`/products/${product.id}`} className="relative overflow-hidden rounded-t-lg h-72 flex items-center justify-center">
       <Image
-          className="rounded-t-lg hover:scale-105 transition-transform duration-500 cursor-pointer object-cover"
-          src={product.imgurl}
+          className="rounded-t-lg hover:scale-105 transition-transform duration-500 cursor-pointer object-cover "
           alt="product image"
-          width={500}
-          height={200}
+          src={product.imgurl}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          style={{ objectFit: 'cover' }}
       />
       </Link>
       <div className="px-5 pb-5 mt-2 min-w-[250px]:">
