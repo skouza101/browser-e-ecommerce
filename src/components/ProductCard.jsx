@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
           src={product.imgurl}
           alt="product image"
           width={500}
-          height={500}
+          height={200}
       />
       </Link>
       <div className="px-5 pb-5 mt-2 min-w-[250px]:">
